@@ -1,0 +1,16 @@
+<h1>Summary</h1>
+<div class="mt-3 mb-3">
+  <p class="fst-italic text-muted">
+    <span>From Date: {{fromDate | date}} </span>
+  </p>
+
+  <p class="fst-italic text-muted">
+    <span class="ml-3">To Date: {{toDate | date}}</span>
+  </p>
+
+  <app-summary [simsCount]="simsCount"
+               [totalUsage]="totalUsage"
+               [topCustomers]="topCustomers"
+               (topCustomerClick)="onTopCustomerClick($event)" 
+               (refresh)="onRefresh()"></app-summary>
+</div>

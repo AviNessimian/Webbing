@@ -1,0 +1,25 @@
+<h1 id="tableLabel">Usage Data</h1>
+<p>This component demonstrates fetching usage data from the server.</p>
+
+<h2>CustomerId: {{customerId}}</h2>
+<p class="fst-italic text-muted">
+  <span>From Date: {{fromDate | date}} </span>
+</p>
+
+<p class="fst-italic text-muted">
+  <span class="ml-3">To Date: {{toDate | date}}</span>
+</p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="usageBySim.length > 0">
+  <thead>
+    <tr>
+      <th>SimId</th>
+      <th>Total Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usageItem of usageBySim">
+      <td>{{usageItem.simId}} </td>
+      <td>{{usageItem.totalUsage}}</td>
+    </tr>
+  </tbody>
+</table>
